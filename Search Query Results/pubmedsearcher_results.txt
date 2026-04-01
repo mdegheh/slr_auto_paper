@@ -1,0 +1,196 @@
+Total number of results: 20
+
+Titles of first 10 papers:
+1. ggplotAgent: a self-debugging multi-modal agent for robust and reproducible scientific visualization.
+2. PromptGuard a structured framework for injection resilient language models.
+3. PyPIMalDet: A malicious PyPI package detection method combining code features and metadata features.
+4. Agentic systems in radiology: Principles, opportunities, privacy risks, regulation, and sustainability concerns.
+5. A novel framework for educational Q&A: Leveraging RAG and Code Interpreters for knowledge retrieval and logical computation.
+6. Privacy-, linguistic-, and information-preserving synthesis of clinical documentation through generative agents.
+7. PRIME 2.0: Proposed Requirements for Cardiovascular Imaging-Related Multimodal-AI Evaluation: An Updated Checklist.
+8. Planner3D: LLM-enhanced Graph Prior Meets 3D Indoor Scene Explicit Regularization.
+9. Styx: A multi-language API Generator for Command-Line Tools.
+10. From segmentation to explanation: Generating textual reports from MRI with LLMs.
+
+
+Full results details:
+--- Paper 1 ---
+Title: ggplotAgent: a self-debugging multi-modal agent for robust and reproducible scientific visualization.
+Authors: Wang Z, Yin Y, Wang J, Yan H, Xie X, Zheng Y
+Published: 2026
+Journal: Bioinformatics advances
+DOI: 10.1093/bioadv/vbaf332
+URL: https://pubmed.ncbi.nlm.nih.gov/41542365/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 2 ---
+Title: PromptGuard a structured framework for injection resilient language models.
+Authors: Alzahrani A
+Published: 2026 Jan 9
+Journal: Scientific reports
+DOI: 10.1038/s41598-025-31086-y
+URL: https://pubmed.ncbi.nlm.nih.gov/41513934/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 3 ---
+Title: PyPIMalDet: A malicious PyPI package detection method combining code features and metadata features.
+Authors: Yan J, Zhao B
+Published: 2026 May
+Journal: Neural networks : the official journal of the International Neural Network Society
+DOI: 10.1016/j.neunet.2025.108487
+URL: https://pubmed.ncbi.nlm.nih.gov/41447827/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 4 ---
+Title: Agentic systems in radiology: Principles, opportunities, privacy risks, regulation, and sustainability concerns.
+Authors: Tzanis E, Adams LC, Akinci D'Antonoli T, Bressem KK, Cuocolo R, Kocak B, Malamateniou C, Klontzas ME
+Published: 2026 Jan
+Journal: Diagnostic and interventional imaging
+DOI: 10.1016/j.diii.2025.10.002
+URL: https://pubmed.ncbi.nlm.nih.gov/41432042/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 5 ---
+Title: A novel framework for educational Q&A: Leveraging RAG and Code Interpreters for knowledge retrieval and logical computation.
+Authors: Lu J, Li J
+Published: 2025
+Journal: PloS one
+DOI: 10.1371/journal.pone.0337361
+URL: https://pubmed.ncbi.nlm.nih.gov/41325406/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 6 ---
+Title: Privacy-, linguistic-, and information-preserving synthesis of clinical documentation through generative agents.
+Authors: van Velzen M, van der Willigen RF, de Beer VJ, de Graaf-Waar HI, Janssen ERC, van Leeuwen S, van der Willigen MF, van der Willigen MJ, Renardus G, El Maaroufi R, Satimin SJ, Hartog LM, Hulsen T, van Meeteren NLU, Scheper MC
+Published: 2025
+Journal: Frontiers in artificial intelligence
+DOI: 10.3389/frai.2025.1644084
+URL: https://pubmed.ncbi.nlm.nih.gov/41036253/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 7 ---
+Title: PRIME 2.0: Proposed Requirements for Cardiovascular Imaging-Related Multimodal-AI Evaluation: An Updated Checklist.
+Authors: Kagiyama N, Tokodi M, Hathaway QA, Arnaout R, Davies R, Dey D, Duchateau N, Fraser AG, Goto S, Jamthikar AD, Lam CSP, Oikonomou EK, Ouyang D, Pandey A, Poterucha TJ, Raisi-Estabragh Z, Strom JB, Zhang Q, Yanamala N, Sengupta PP
+Published: 2026 Feb
+Journal: JACC. Cardiovascular imaging
+DOI: 10.1016/j.jcmg.2025.08.004
+URL: https://pubmed.ncbi.nlm.nih.gov/40892627/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 8 ---
+Title: Planner3D: LLM-enhanced Graph Prior Meets 3D Indoor Scene Explicit Regularization.
+Authors: Wei Y, Min MR, Vosselman G, Li LE, Yang MY
+Published: 2025 Aug 25
+Journal: IEEE transactions on pattern analysis and machine intelligence
+DOI: 10.1109/TPAMI.2025.3602216
+URL: https://pubmed.ncbi.nlm.nih.gov/40853827/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 9 ---
+Title: Styx: A multi-language API Generator for Command-Line Tools.
+Authors: Rupprecht F, Kai J, Shrestha B, Giavasis S, Xu T, Glatard T, Milham MP, Kiar G
+Published: 2025 Jul 30
+Journal: bioRxiv : the preprint server for biology
+DOI: 10.1101/2025.07.24.666435
+URL: https://pubmed.ncbi.nlm.nih.gov/40766634/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 10 ---
+Title: From segmentation to explanation: Generating textual reports from MRI with LLMs.
+Authors: Valerio AG, Trufanova K, de Benedictis S, Vessio G, Castellano G
+Published: 2025 Oct
+Journal: Computer methods and programs in biomedicine
+DOI: 10.1016/j.cmpb.2025.108922
+URL: https://pubmed.ncbi.nlm.nih.gov/40633400/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 11 ---
+Title: DrugTar improves druggability prediction by integrating large language models and gene ontologies.
+Authors: Borhani N, Izadi I, Motahharynia A, Sheikholeslami M, Gheisari Y
+Published: 2025 Jul 1
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btaf360
+URL: https://pubmed.ncbi.nlm.nih.gov/40581797/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 12 ---
+Title: Automatic biomarker discovery and enrichment with BRAD.
+Authors: Pickard J, Prakash R, Choi MA, Oliven N, Stansbury C, Cwycyshyn J, Galioto N, Gorodetsky A, Velasquez A, Rajapakse I
+Published: 2025 May 6
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btaf159
+URL: https://pubmed.ncbi.nlm.nih.gov/40323323/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 13 ---
+Title: TPepRet: a deep learning model for characterizing T-cell receptors-antigen binding patterns.
+Authors: Wang M, Fan W, Wu T, Li M
+Published: 2024 Dec 26
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btaf022
+URL: https://pubmed.ncbi.nlm.nih.gov/39880376/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 14 ---
+Title: Performance and Reproducibility of Large Language Models in Named Entity Recognition: Considerations for the Use in Controlled Environments.
+Authors: Dietrich J, Hollstein A
+Published: 2025 Mar
+Journal: Drug safety
+DOI: 10.1007/s40264-024-01499-1
+URL: https://pubmed.ncbi.nlm.nih.gov/39661234/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 15 ---
+Title: FoodAtlas: Automated knowledge extraction of food and chemicals from literature.
+Authors: Youn J, Li F, Simmons G, Kim S, Tagkopoulos I
+Published: 2024 Oct
+Journal: Computers in biology and medicine
+DOI: 10.1016/j.compbiomed.2024.109072
+URL: https://pubmed.ncbi.nlm.nih.gov/39216404/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 16 ---
+Title: A method to promote safe cycling powered by large language models and AI agents.
+Authors: Costa DG, Silva I, Medeiros M, Bittencourt JCN, Andrade M
+Published: 2024 Dec
+Journal: MethodsX
+DOI: 10.1016/j.mex.2024.102880
+URL: https://pubmed.ncbi.nlm.nih.gov/39185461/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 17 ---
+Title: ChatCAD+: Toward a Universal and Reliable Interactive CAD Using LLMs.
+Authors: Zhao Z, Wang S, Gu J, Zhu Y, Mei L, Zhuang Z, Cui Z, Wang Q, Shen D
+Published: 2024 Nov
+Journal: IEEE transactions on medical imaging
+DOI: 10.1109/TMI.2024.3398350
+URL: https://pubmed.ncbi.nlm.nih.gov/38717880/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 18 ---
+Title: CVIDS: A Collaborative Localization and Dense Mapping Framework for Multi-Agent Based Visual-Inertial SLAM.
+Authors: Zhang T, Zhang L, Chen Y, Zhou Y
+Published: 2022
+Journal: IEEE transactions on image processing : a publication of the IEEE Signal Processing Society
+DOI: 10.1109/TIP.2022.3213189
+URL: https://pubmed.ncbi.nlm.nih.gov/36240038/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 19 ---
+Title: BioASF: a framework for automatically generating executable pathway models specified in BioPAX.
+Authors: Haydarlou R, Jacobsen A, Bonzanni N, Feenstra KA, Abeln S, Heringa J
+Published: 2016 Jun 15
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btw250
+URL: https://pubmed.ncbi.nlm.nih.gov/27307645/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 20 ---
+Title: Modeling multi-cellular behavior in epidermal tissue homeostasis via finite state machines in multi-agent systems.
+Authors: Sütterlin T, Huber S, Dickhaus H, Grabe N
+Published: 2009 Aug 15
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btp361
+URL: https://pubmed.ncbi.nlm.nih.gov/19535533/
+Summary: Available in PubMed search engine via the URL.
+

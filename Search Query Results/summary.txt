@@ -32,3 +32,16 @@ Top 10 results:
 10. Has cross-project defect prediction truly progressed? A five-year field diagnosis challenging the state-of-the-art
 
 d. Web of Science - status missing api key. it is paid
+
+e. PubMed - total results = 20
+Top 10 results:
+1. ggplotAgent: a self-debugging multi-modal agent for robust and reproducible scientific visualization.
+2. PromptGuard a structured framework for injection resilient language models.
+3. PyPIMalDet: A malicious PyPI package detection method combining code features and metadata features.
+4. Agentic systems in radiology: Principles, opportunities, privacy risks, regulation, and sustainability concerns.
+5. A novel framework for educational Q&A: Leveraging RAG and Code Interpreters for knowledge retrieval and logical computation.
+6. Privacy-, linguistic-, and information-preserving synthesis of clinical documentation through generative agents.
+7. PRIME 2.0: Proposed Requirements for Cardiovascular Imaging-Related Multimodal-AI Evaluation: An Updated Checklist.
+8. Planner3D: LLM-enhanced Graph Prior Meets 3D Indoor Scene Explicit Regularization.
+9. Styx: A multi-language API Generator for Command-Line Tools.
+10. From segmentation to explanation: Generating textual reports from MRI with LLMs.

@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from searchers import ArxivSearcher, IEEESearcher, ScopusSearcher, WosSearcher
+from searchers import ArxivSearcher, IEEESearcher, ScopusSearcher, WosSearcher, PubmedSearcher
 
 def main():
     # Load environment variables from .env file
@@ -18,7 +18,8 @@ def main():
         # ArxivSearcher(),
         # IEEESearcher(),  ---- api key is waiting status
         # ScopusSearcher(), 
-        # WosSearcher()   ---- missing api key. it is paid
+        # WosSearcher(),   ---- missing api key. it is paid
+        PubmedSearcher()
     ]
     
     for searcher in searchers:

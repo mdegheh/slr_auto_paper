@@ -32,3 +32,4 @@ Results will be paginated, downloaded, and saved as text files inside the `Searc
 - **IEEE Xplore** (Metadata Search API)
 - **Scopus** (Elsevier Search API)
 - **Web of Science** (Clarivate Search API)
+- **PubMed** (NCBI E-utilities API)
