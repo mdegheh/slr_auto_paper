@@ -1,0 +1,34 @@
+Approach one 1 unified search query on multiple databases
+
+Search string:
+("large language model*" OR "LLM*" OR "autonomous agent*" OR "multi-agent*" OR "AI agent*") AND ("code repositor*" OR "source code" OR "scientific paper*" OR "executable paper*" OR "research artifact*") AND ("reproducib*" OR "code execution" OR "dependency resolution" OR "environment synthesis" OR "dynamic analysis" OR "runtime profiling" OR "sandboxing" OR "automated execution" OR "environment setup" OR "containerization" OR "code repair")
+
+a. Arxiv - total results = 30
+Top 10 results:
+1. SelfPiCo: Self-Guided Partial Code Execution with LLMs
+2. Enhancing Source Code Security with LLMs: Demystifying The Challenges and Generating Reliable Repairs
+3. AutoDroid: LLM-powered Task Automation in Android
+4. CraftRTL: High-quality Synthetic Data Generation for Verilog Code Models with Correct-by-Construction Non-Textual Representations and Targeted Code Repair
+5. Sari Sandbox: A Virtual Retail Store Environment for Embodied AI Agents
+6. Code Repair with LLMs gives an Exploration-Exploitation Tradeoff
+7. Can Large Language Models Predict Parallel Code Performance?
+8. Pie: A Programmable Serving System for Emerging LLM Applications
+9. Enhancing LLM Agent Safety via Causal Influence Prompting
+10. ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences
+
+b. IEEE - status failed api key activation waiting
+
+c. Scopus - total results = 1025
+Top 10 results:
+1. Biomedical text summarization with large language models: methodologies, challenges, and future directions
+2. Source code vulnerability detection based on deep learning: a review
+3. SPECTER-BS: effective citation recommendation using SPECTER with bibliographic scoring
+4. HeteroMed: a heterogeneous graph knowledge-enhanced model for medication recommendation
+5. Data preparation and quality for code-centric generative software engineering tasks: a systematic literature review
+6. How to run it? Automated setup steps generation for JavaWeb application
+7. Mitigating sensitive information leakage in LLMs4Code through machine unlearning
+8. Vuln2Action: An LLM-based framework for generating vulnerability reproduction steps and mapping exploits
+9. SPVR: syntax-to-prompt vulnerability repair based on large language models
+10. Has cross-project defect prediction truly progressed? A five-year field diagnosis challenging the state-of-the-art
+
+d. Web of Science - status missing api key. it is paid
