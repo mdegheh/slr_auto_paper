@@ -18,18 +18,33 @@ class PubmedSearcher(BaseSearcher):
         
         safe_max = min(max_results, 10000) 
         
-        search_params = {
-            "db": "pubmed",
-            "term": query,
-            "retmode": "json",
-            "retmax": safe_max
-        }
+        import re
+        import urllib.parse
         
+        # PubMed syntax matching formatting
+        def replacer(match):
+            term = match.group(0)
+            if term in ("AND", "OR", "NOT", "ANDNOT", "TO"):
+                return term
+            if term.endswith(']'): # already has a field tag
+                return term
+            return f'{term}[Title/Abstract]'
+
+        # Match double-quoted phrases or sequences of alphanumeric chars, dashes, and asterisks
+        pattern = r'("[^"]+"|[A-Za-z0-9_\-\*]+)'
+        formatted_query = re.sub(pattern, replacer, query)
+        print(f"PubMed formatted query: {formatted_query}")
+        
+        # Encode quotes and spaces strictly according to the PubMed API guide using quote_plus
+        encoded_query = urllib.parse.quote_plus(formatted_query)
+        
+        search_params_str = f"db=pubmed&retmode=json&retmax={safe_max}&term={encoded_query}"
         if self.api_key and self.api_key != "your_pubmed_api_key_here":
-            search_params["api_key"] = self.api_key
+            search_params_str += f"&api_key={self.api_key}"
             
         try:
-            search_res = requests.get(search_url, params=search_params)
+            # Pass the manually encoded string instead of dict to enforce `+` and `%22` exactly
+            search_res = requests.get(search_url, params=search_params_str)
             search_res.raise_for_status()
             search_data = search_res.json()
             id_list = search_data.get("esearchresult", {}).get("idlist", [])

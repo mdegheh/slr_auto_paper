@@ -1,0 +1,76 @@
+Total number of results: 7
+
+Titles of first 10 papers:
+1. Open source and reproducible and inexpensive infrastructure for data challenges and education.
+2. Pro-Con Debate: Should Code Sharing Be Mandatory for Publication?
+3. Ten simple rules for writing Dockerfiles for reproducible data science.
+4. Publishing computational research - a review of infrastructures for reproducible and transparent scholarly communication.
+5. IsoProt: A Complete and Reproducible Workflow To Analyze iTRAQ/TMT Experiments.
+6. Dugong: a Docker image, based on Ubuntu Linux, focused on reproducibility and replicability for bioinformatics analyses.
+7. REPRODUCIBLE AND SHAREABLE QUANTIFICATIONS OF PATHOGENICITY.
+
+
+Full results details:
+--- Paper 1 ---
+Title: Open source and reproducible and inexpensive infrastructure for data challenges and education.
+Authors: DeWitt PE, Rebull MA, Bennett TD
+Published: 2024 Jan 2
+Journal: Scientific data
+DOI: 10.1038/s41597-023-02854-0
+URL: https://pubmed.ncbi.nlm.nih.gov/38167901/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 2 ---
+Title: Pro-Con Debate: Should Code Sharing Be Mandatory for Publication?
+Authors: Melvin RL, Barker SJ, Kiani J, Berkowitz DE
+Published: 2022 Aug 1
+Journal: Anesthesia and analgesia
+DOI: 10.1213/ANE.0000000000005848
+URL: https://pubmed.ncbi.nlm.nih.gov/35839495/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 3 ---
+Title: Ten simple rules for writing Dockerfiles for reproducible data science.
+Authors: Nüst D, Sochat V, Marwick B, Eglen SJ, Head T, Hirst T, Evans BD
+Published: 2020 Nov
+Journal: PLoS computational biology
+DOI: 10.1371/journal.pcbi.1008316
+URL: https://pubmed.ncbi.nlm.nih.gov/33170857/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 4 ---
+Title: Publishing computational research - a review of infrastructures for reproducible and transparent scholarly communication.
+Authors: Konkol M, Nüst D, Goulier L
+Published: 2020
+Journal: Research integrity and peer review
+DOI: 10.1186/s41073-020-00095-y
+URL: https://pubmed.ncbi.nlm.nih.gov/32685199/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 5 ---
+Title: IsoProt: A Complete and Reproducible Workflow To Analyze iTRAQ/TMT Experiments.
+Authors: Griss J, Vinterhalter G, Schwämmle V
+Published: 2019 Apr 5
+Journal: Journal of proteome research
+DOI: 10.1021/acs.jproteome.8b00968
+URL: https://pubmed.ncbi.nlm.nih.gov/30855969/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 6 ---
+Title: Dugong: a Docker image, based on Ubuntu Linux, focused on reproducibility and replicability for bioinformatics analyses.
+Authors: Menegidio FB, Jabes DL, Costa de Oliveira R, Nunes LR
+Published: 2018 Feb 1
+Journal: Bioinformatics (Oxford, England)
+DOI: 10.1093/bioinformatics/btx554
+URL: https://pubmed.ncbi.nlm.nih.gov/28968637/
+Summary: Available in PubMed search engine via the URL.
+
+--- Paper 7 ---
+Title: REPRODUCIBLE AND SHAREABLE QUANTIFICATIONS OF PATHOGENICITY.
+Authors: Manrai AK, Wang BL, Patel CJ, Kohane IS
+Published: 2016
+Journal: Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing
+DOI: No DOI
+URL: https://pubmed.ncbi.nlm.nih.gov/26776189/
+Summary: Available in PubMed search engine via the URL.
+

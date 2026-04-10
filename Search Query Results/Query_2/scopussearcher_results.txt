@@ -1,0 +1,232 @@
+Total number of results: 24
+
+Titles of first 10 papers:
+1. Corrigendum to “nBLAST-JC: An accelerated deployment of nucleotide BLAST on high-performance cluster”(Heliyon, (2025), 11, 10, (e41866), (S2405844025002464), 10.1016/j.heliyon.2025.e41866)
+2. Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to Replicating Research
+3. Longitudinal Study of the Software Environments Produced by Dockerfiles from Research Artifacts: Initial Design
+4. Adapting the AI Scientist for Enterprise: Solving Real Business Problems with Autonomous Text-To-SQL Research
+5. REPRO-BENCH: Can Agentic AI Systems Assess the Reproducibility of Social Science Research?
+6. Efficiency study of GraphQL and REST Microservices in Docker containers: A computational experiment
+7. Open source and reproducible and inexpensive infrastructure for data challenges and education
+8. Pro-Con Debate: Should Code Sharing Be Mandatory for Publication?
+9. 1-2-3 Reproducibility for Quantum Software Experiments
+10. Learning from reproducing computational results: Introducing three principles and the Reproduction Package
+
+
+Full results details:
+--- Paper 1 ---
+Title: Corrigendum to “nBLAST-JC: An accelerated deployment of nucleotide BLAST on high-performance cluster”(Heliyon, (2025), 11, 10, (e41866), (S2405844025002464), 10.1016/j.heliyon.2025.e41866)
+Authors: Rani S.
+Published: 2026-01-01
+Journal: Heliyon
+DOI: 10.1016/j.heliyon.2025.e44348
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105027552738&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 2 ---
+Title: Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to Replicating Research
+Authors: Acher M.
+Published: 2025-10-21
+Journal: Proceedings of the 3rd ACM Conference on Reproducibility and Replicability ACM Rep 2025
+DOI: 10.1145/3736731.3746162
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105022204627&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 3 ---
+Title: Longitudinal Study of the Software Environments Produced by Dockerfiles from Research Artifacts: Initial Design
+Authors: Guilloteau Q.
+Published: 2025-10-21
+Journal: Proceedings of the 3rd ACM Conference on Reproducibility and Replicability ACM Rep 2025
+DOI: 10.1145/3736731.3746146
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105022148628&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 4 ---
+Title: Adapting the AI Scientist for Enterprise: Solving Real Business Problems with Autonomous Text-To-SQL Research
+Authors: Fedorov V.
+Published: 2025-10-01
+Journal: Doklady Mathematics
+DOI: 10.1134/S1064562425700474
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105033844918&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 5 ---
+Title: REPRO-BENCH: Can Agentic AI Systems Assess the Reproducibility of Social Science Research?
+Authors: Hu C.
+Published: 2025-01-01
+Journal: Proceedings of the Annual Meeting of the Association for Computational Linguistics
+DOI: 10.18653/v1/2025.findings-acl.1210
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105028632559&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 6 ---
+Title: Efficiency study of GraphQL and REST Microservices in Docker containers: A computational experiment
+Authors: Quiña-Mera A.
+Published: 2025-01-01
+Journal: Data and Metadata
+DOI: 10.56294/DM2025199
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105003243689&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 7 ---
+Title: Open source and reproducible and inexpensive infrastructure for data challenges and education
+Authors: DeWitt P.E.
+Published: 2024-12-01
+Journal: Scientific Data
+DOI: 10.1038/s41597-023-02854-0
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85181243688&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 8 ---
+Title: Pro-Con Debate: Should Code Sharing Be Mandatory for Publication?
+Authors: Melvin R.L.
+Published: 2022-08-01
+Journal: Anesthesia and Analgesia
+DOI: 10.1213/ANE.0000000000005848
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85134632096&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 9 ---
+Title: 1-2-3 Reproducibility for Quantum Software Experiments
+Authors: Mauerer W.
+Published: 2022-01-01
+Journal: Proceedings 2022 IEEE International Conference on Software Analysis Evolution and Reengineering Saner 2022
+DOI: 10.1109/SANER53432.2022.00148
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85127093815&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 10 ---
+Title: Learning from reproducing computational results: Introducing three principles and the Reproduction Package
+Authors: Krafczyk M.S.
+Published: 2021-05-17
+Journal: Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences
+DOI: 10.1098/rsta.2020.0069
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85103609318&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 11 ---
+Title: Ten simple rules for writing Dockerfiles for reproducible data science
+Authors: Nust D.
+Published: 2020-11-10
+Journal: Plos Computational Biology
+DOI: 10.1371/journal.pcbi.1008316
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85096030368&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 12 ---
+Title: Leveraging container technologies in a giscience project: A perspective from open reproducible research
+Authors: Zaragozí B.M.
+Published: 2020-01-01
+Journal: ISPRS International Journal of Geo Information
+DOI: 10.3390/ijgi9030138
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85081894526&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 13 ---
+Title: IsoProt: A Complete and Reproducible Workflow to Analyze iTRAQ/TMT Experiments
+Authors: Griss J.
+Published: 2019-04-05
+Journal: Journal of Proteome Research
+DOI: 10.1021/acs.jproteome.8b00968
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85063970771&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 14 ---
+Title: Dugong: A Docker image, based on Ubuntu Linux, focused on reproducibility and replicability for bioinformatics analyses
+Authors: Menegidio F.B.
+Published: 2018-02-01
+Journal: Bioinformatics
+DOI: 10.1093/bioinformatics/btx554
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85041428367&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 15 ---
+Title: Portable learning environments for hands-on computational instruction using container-and cloud-based technology to teach data science
+Authors: Holdgraf C.
+Published: 2017-07-09
+Journal: ACM International Conference Proceeding Series
+DOI: 10.1145/3093338.3093370
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85025842595&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 16 ---
+Title: drVM: A new tool for efficient genome assembly of known eukaryotic viruses from metagenomes
+Authors: Lin H.H.
+Published: 2017-02-01
+Journal: Gigascience
+DOI: 10.1093/gigascience/gix003
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85021860119&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 17 ---
+Title: Multicenter data sharing for collaboration in sleep medicine
+Authors: Beier M.
+Published: 2017-02-01
+Journal: Future Generation Computer Systems
+DOI: 10.1016/j.future.2016.03.025
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84965052616&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 18 ---
+Title: Opening the publication process with executable research compendia
+Authors: Nüst D.
+Published: 2017-01-01
+Journal: D Lib Magazine
+DOI: 10.1045/january2017-nuest
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85011655890&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 19 ---
+Title: WalT: A reproducible testbed for reproducible network experiments
+Authors: Brunisholz P.
+Published: 2016-09-06
+Journal: Proceedings IEEE INFOCOM
+DOI: 10.1109/INFCOMW.2016.7562062
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84988859603&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 20 ---
+Title: Using docker containers to improve reproducibility in software engineering research
+Authors: Cito J.
+Published: 2016-05-14
+Journal: Proceedings International Conference on Software Engineering
+DOI: 10.1145/2889160.2891057
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85021371427&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 21 ---
+Title: Using docker containers to improve reproducibility in software and web engineering research
+Authors: Cito J.
+Published: 2016-01-01
+Journal: Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics
+DOI: 10.1007/978-3-319-38791-8_58
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84977594883&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 22 ---
+Title: Reproducible and shareable quantifications of pathogenicity
+Authors: Manrai A.K.
+Published: 2016-01-01
+Journal: Pacific Symposium on Biocomputing
+DOI: 10.1142/9789814749411_0022
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85012120405&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 23 ---
+Title: Toward executable scientific publications
+Authors: Strijkers R.
+Published: 2011-06-15
+Journal: Procedia Computer Science
+DOI: 10.1016/j.procs.2011.04.074
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=79958272183&origin=inward
+Summary: No Summary provided in search results.
+
+--- Paper 24 ---
+Title: Visualization and interactive simulation of modelica models for control education
+Authors: Carla M.V.
+Published: 2009-11-17
+Journal: 2009 Chinese Control and Decision Conference Ccdc 2009
+DOI: 10.1109/CCDC.2009.5192827
+URL: https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=70449366425&origin=inward
+Summary: No Summary provided in search results.
+

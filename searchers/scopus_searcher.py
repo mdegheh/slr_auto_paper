@@ -10,6 +10,15 @@ class ScopusSearcher(BaseSearcher):
         super().__init__()
         self.api_key = os.getenv("SCOPUS_API_KEY")
 
+    def _format_query(self, query: str) -> str:
+        # Elsevier Scopus API specifies wrapping search parameters in field restrictors.
+        # Use TITLE-ABS-KEY to search within Title, Abstract, and Keywords fields.
+        # Scopus natively supports double-quoted loose phrases with asterisks (e.g. "model*").
+        # The requests library will properly handle URL-encoding this string.
+        formatted_query = f"TITLE-ABS-KEY({query})"
+        print(f"Scopus formatted query: {formatted_query}")
+        return formatted_query
+
     def search(self, query: str, max_results: int = 2000):
         if not self.api_key or self.api_key == "your_scopus_api_key_here":
             print("Valid SCOPUS_API_KEY is missing. Cannot perform search.")
@@ -24,11 +33,13 @@ class ScopusSearcher(BaseSearcher):
             "X-ELS-APIKey": self.api_key
         }
         
+        formatted_query = self._format_query(query)
+        
         while len(self.results) < max_results:
             fetch_size = min(25, max_results - len(self.results))
             
             params = {
-                "query": query,
+                "query": formatted_query,
                 "count": fetch_size,
                 "start": start
             }

@@ -1,4 +1,5 @@
 import arxiv
+import re
 from .base_searcher import BaseSearcher
 
 class ArxivSearcher(BaseSearcher):
@@ -9,9 +10,33 @@ class ArxivSearcher(BaseSearcher):
         super().__init__()
         self.client = arxiv.Client()
 
+    def _format_query(self, query: str) -> str:
+        # Remove asterisks since Arxiv doesn't support them inside phrases
+        query = query.replace('*', '')
+
+        # Function to process each matched term
+        def replacer(match):
+            term = match.group(0)
+            if term in ("AND", "OR", "NOT", "ANDNOT", "TO"):
+                return term
+            if term.startswith('all:'):
+                return term
+            return f'all:{term}'
+
+        # Match double-quoted phrases or sequences of alphanumeric chars and dashes
+        pattern = r'("[^"]+"|[A-Za-z0-9_\-]+)'
+        
+        # Substitute words/phrases using the replacer function
+        formatted_query = re.sub(pattern, replacer, query)
+        
+        return formatted_query
+
     def search(self, query: str, max_results: int = 2000):
+        formatted_query = self._format_query(query)
+        print(f"Arxiv formatted query: {formatted_query}")
+        
         search_obj = arxiv.Search(
-            query=query,
+            query=formatted_query,
             max_results=max_results,
             sort_by=arxiv.SortCriterion.Relevance
         )
