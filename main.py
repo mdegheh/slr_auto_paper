@@ -32,35 +32,71 @@ def main():
     # arXiv query must already be fully fielded.
     # arXiv supports field prefixes like all: and Boolean grouping. :contentReference[oaicite:2]{index=2}
     arxiv_query_str = (
-        '(all:"large language model" OR all:LLM OR all:"autonomous agent" OR '
-        'all:"multi-agent" OR all:"AI agent" OR all:"automated system" OR '
-        'all:"code generation") AND '
-        '(all:"code repository" OR all:"source code" OR all:"scientific paper" OR '
-        'all:"executable paper" OR all:"research artifact" OR all:"repository synthesis") AND '
-        '(all:reproducib* OR all:"code execution" OR all:"dependency resolution" OR '
-        'all:"environment synthesis" OR all:"runtime profiling" OR all:sandboxing OR '
-        'all:"automated execution" OR all:"environment setup" OR all:containerization OR '
-        'all:"repository repair")'
-    )   
+        '('
+        'all:"large language model" OR all:LLM OR '
+        'all:"autonomous agent" OR all:"multi-agent" OR '
+        'all:"AI agent" OR '
+        'all:"code generation" OR all:"program synthesis"'
+        ') AND ('
+        'all:"source code" OR all:"code repository" OR '
+        'all:"research artifact" OR all:"software artifact" OR '
+        'all:"scientific paper" OR all:"executable paper"'
+        #'all:"experiment" OR all:"workflow"'
+        ') AND ('
+        'all:reproducib* OR '
+        'all:"code execution" OR all:"execution" OR '
+        'all:"dependency resolution" OR all:dependency OR '
+        'all:"environment setup" OR '
+        #'all:environment OR all:docker OR all:repair OR '
+        'all:containerization OR '
+        'all:"repository repair"'
+        ')'
+    )
 
     scopus_query_str = (
         'TITLE-ABS-KEY(('
-        '"large language model" OR "large language models" OR LLM OR LLMs OR '
-        '"autonomous agent" OR "autonomous agents" OR "multi-agent" OR '
-        '"multi-agent system" OR "multi-agent systems" OR "AI agent" OR "AI agents" OR '
-        '"automated system" OR "automated systems" OR "code generation"'
+        '"large language model" OR "large language models" OR '
+        'LLM OR LLMs OR '
+        '"autonomous agent" OR "autonomous agents" OR '
+        '"multi-agent" OR '
+        '"AI agent" OR "AI agents" OR '
+        '"code generation" OR "program synthesis"'
         ') AND ('
-        '"code repository" OR "code repositories" OR "source code" OR '
-        '"scientific paper" OR "scientific papers" OR "executable paper" OR '
-        '"executable papers" OR "research artifact" OR "research artifacts" OR '
-        '"repository synthesis"'
+        '"source code" OR "code repository" OR "code repositories" OR '
+        '"research artifact" OR "research artifacts" OR '
+        '"software artifact" OR "software artifacts" OR '
+        '"scientific paper" OR "scientific papers" OR '
+        '"executable paper" OR "executable papers"'
         ') AND ('
-        'reproducib* OR "code execution" OR "dependency resolution" OR '
-        '"environment synthesis" OR "runtime profiling" OR sandboxing OR '
-        '"automated execution" OR "environment setup" OR containerization OR '
+        'reproducib* OR '
+        '"code execution" OR '
+        '"dependency resolution" OR '
+        '"environment setup" OR '
+        'containerization OR '
         '"repository repair"'
         '))'
     )
+
+    ieee_query_str = (
+        '("large language model" OR "large language models" OR '
+        #'LLM OR LLMs OR '
+        #'"autonomous agent" OR "autonomous agents" OR '
+        #'"multi-agent" OR '
+        #'"AI agent" OR "AI agents" OR '
+        #'"code generation" OR "program synthesis") AND '
+        #'("source code" OR "code repository" OR "code repositories" OR '
+        #'"research artifact" OR "research artifacts" OR '
+        #'"software artifact" OR "software artifacts" OR '
+        '"scientific paper" OR "scientific papers" OR '
+        '"executable paper" OR "executable papers") AND '
+        '(reproducibility OR '
+        #'"code execution" OR '
+        #'"dependency resolution" OR '
+        #'"environment setup" OR '
+        #'containerization OR '
+        '"repository repair")'
+    )
+
     base_output_dir = "Search Query Results"
     os.makedirs(base_output_dir, exist_ok=True)
 
@@ -91,9 +127,9 @@ def main():
         f.write("-" * 50 + "\n\n")
 
     searchers = [
-        ArxivSearcher(),
-        # IEEESearcher(),
-        ScopusSearcher(),
+        #ArxivSearcher(),
+        IEEESearcher(),
+        #ScopusSearcher(),
         # WosSearcher(),
         PubmedSearcher(),
         # OpenAlexSearcher(),
@@ -108,6 +144,8 @@ def main():
                 results = searcher.search(query=arxiv_query_str)
             elif name == "ScopusSearcher":
                 results = searcher.search(query=scopus_query_str)
+            elif searcher.__class__.__name__ == 'IEEESearcher':
+                results = searcher.search(query=ieee_query_str)
             else:
                 results = searcher.search(query=query_str)
 
@@ -121,9 +159,11 @@ def main():
             print(f"Finished writing results to {filename}")
 
         except Exception as e:
-            print(f"Error running {name}: {e}")
-            with open(summary_file, "a", encoding="utf-8") as f:
-                f.write(f"{name} Results: Error ({e})\n")
+            print(f"API request failed: {e}")
+            if response is not None:
+                print("Status code:", response.status_code)
+                print("Response body:", response.text[:2000])
+            break
 
 
 if __name__ == "__main__":
