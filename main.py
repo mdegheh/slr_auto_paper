@@ -159,6 +159,7 @@ def main():
             print(f"Finished writing results to {filename}")
 
         except Exception as e:
+            print('AAAAA')
             print(f"API request failed: {e}")
             if response is not None:
                 print("Status code:", response.status_code)
