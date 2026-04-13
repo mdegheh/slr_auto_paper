@@ -1,72 +1,130 @@
 import os
 from dotenv import load_dotenv
-from searchers import ArxivSearcher, IEEESearcher, ScopusSearcher, WosSearcher, PubmedSearcher, OpenAlexSearcher
+from searchers import (
+    ArxivSearcher,
+    IEEESearcher,
+    ScopusSearcher,
+    WosSearcher,
+    PubmedSearcher,
+    OpenAlexSearcher,
+)
+import searchers.arxiv_searcher
+import searchers.scopus_searcher
+
+print("Arxiv module file:", searchers.arxiv_searcher.__file__)
+print("Scopus module file:", searchers.scopus_searcher.__file__)
 
 def main():
     load_dotenv()
-    
-    # Define the search query
-    query_str = '''("scientific paper*" OR "research paper*" OR "scholarly article*" OR "preprint*" OR "manuscript*" OR "executable paper*" OR "research artifact*") AND ("large language model*" OR "LLM*" OR "generative AI" OR "autonomous*" OR "automatic*" OR "fully automated" OR "automat*" OR "AI agent*" OR "agentic workflow*" OR "reproducib*" OR "replicab*" OR "reproduction" OR "replication" OR "Paper2code") AND ("executable code" OR "environment synthesis" OR "dependency resolution" OR "containerization" OR "Docker*" OR "sandboxing" OR "execution platform*" OR "reproduction package*")'''
-    
-    # Base output directory
+
+    # Generic query for searchers that expect a plain Boolean string
+    query_str = (
+        '("large language model*" OR "LLM*" OR "autonomous agent*" OR '
+        '"multi-agent*" OR "AI agent*") AND '
+        '("code repositor*" OR "source code" OR "scientific paper*" OR '
+        '"executable paper*" OR "research artifact*") AND '
+        '("reproducib*" OR "code execution" OR "dependency resolution" OR '
+        '"environment synthesis" OR "dynamic analysis" OR "runtime profiling" OR '
+        '"sandboxing" OR "automated execution" OR "environment setup" OR '
+        '"containerization" OR "code repair" OR "code generation")'
+    )
+
+    # arXiv query must already be fully fielded.
+    # arXiv supports field prefixes like all: and Boolean grouping. :contentReference[oaicite:2]{index=2}
+    arxiv_query_str = (
+        '(all:"large language model" OR all:LLM OR all:"autonomous agent" OR '
+        'all:"multi-agent" OR all:"AI agent" OR all:"automated system" OR '
+        'all:"code generation") AND '
+        '(all:"code repository" OR all:"source code" OR all:"scientific paper" OR '
+        'all:"executable paper" OR all:"research artifact" OR all:"repository synthesis") AND '
+        '(all:reproducib* OR all:"code execution" OR all:"dependency resolution" OR '
+        'all:"environment synthesis" OR all:"runtime profiling" OR all:sandboxing OR '
+        'all:"automated execution" OR all:"environment setup" OR all:containerization OR '
+        'all:"repository repair")'
+    )   
+
+    scopus_query_str = (
+        'TITLE-ABS-KEY(('
+        '"large language model" OR "large language models" OR LLM OR LLMs OR '
+        '"autonomous agent" OR "autonomous agents" OR "multi-agent" OR '
+        '"multi-agent system" OR "multi-agent systems" OR "AI agent" OR "AI agents" OR '
+        '"automated system" OR "automated systems" OR "code generation"'
+        ') AND ('
+        '"code repository" OR "code repositories" OR "source code" OR '
+        '"scientific paper" OR "scientific papers" OR "executable paper" OR '
+        '"executable papers" OR "research artifact" OR "research artifacts" OR '
+        '"repository synthesis"'
+        ') AND ('
+        'reproducib* OR "code execution" OR "dependency resolution" OR '
+        '"environment synthesis" OR "runtime profiling" OR sandboxing OR '
+        '"automated execution" OR "environment setup" OR containerization OR '
+        '"repository repair"'
+        '))'
+    )
     base_output_dir = "Search Query Results"
     os.makedirs(base_output_dir, exist_ok=True)
-    
-    # Determine the next query directory
-    existing_dirs = [d for d in os.listdir(base_output_dir) if os.path.isdir(os.path.join(base_output_dir, d)) and d.startswith("Query_")]
+
+    existing_dirs = [
+        d for d in os.listdir(base_output_dir)
+        if os.path.isdir(os.path.join(base_output_dir, d)) and d.startswith("Query_")
+    ]
+
     max_num = 0
     for d in existing_dirs:
         try:
             num = int(d.split("_")[1])
-            if num > max_num:
-                max_num = num
-        except ValueError:
+            max_num = max(max_num, num)
+        except (IndexError, ValueError):
             pass
-            
+
     query_num = max_num + 1
     output_dir = os.path.join(base_output_dir, f"Query_{query_num}")
     os.makedirs(output_dir, exist_ok=True)
-    
-    # Save the query used to summary.txt inside the new folder
+
     summary_file = os.path.join(output_dir, "summary.txt")
     with open(summary_file, "w", encoding="utf-8") as f:
-        f.write("Search Query Used:\n")
+        f.write("Search Query Used\n")
         f.write("-" * 50 + "\n")
-        f.write(query_str + "\n")
+        f.write(f"Generic query:\n{query_str}\n\n")
+        f.write(f"arXiv query:\n{arxiv_query_str}\n\n")
+        f.write(f"Scopus query:\n{scopus_query_str}\n")
         f.write("-" * 50 + "\n\n")
-    
-    # We can add more searchers here in the future
+
     searchers = [
         ArxivSearcher(),
-        # IEEESearcher(),  ---- api key is waiting status
-        ScopusSearcher(), 
-        # WosSearcher(),   ---- missing api key. it is paid
+        # IEEESearcher(),
+        ScopusSearcher(),
+        # WosSearcher(),
         PubmedSearcher(),
-        OpenAlexSearcher()
+        # OpenAlexSearcher(),
     ]
-    
+
     for searcher in searchers:
-        print(f"\n--- Running search using {searcher.__class__.__name__} ---")
-        
+        name = searcher.__class__.__name__
+        print(f"\n--- Running search using {name} ---")
+
         try:
-            # Search the database
-            results = searcher.search(query=query_str)
-            print(f"{searcher.__class__.__name__} Total results found: {len(results)}")
-            
-            # Write total count to summary.txt
+            if name == "ArxivSearcher":
+                results = searcher.search(query=arxiv_query_str)
+            elif name == "ScopusSearcher":
+                results = searcher.search(query=scopus_query_str)
+            else:
+                results = searcher.search(query=query_str)
+
+            print(f"{name} Total results found: {len(results)}")
+
             with open(summary_file, "a", encoding="utf-8") as f:
-                f.write(f"{searcher.__class__.__name__} Results: {len(results)}\n")
-            
-            # Define output filename based on the searcher class name, inside the new folder
-            filename = os.path.join(output_dir, f"{searcher.__class__.__name__.lower()}_results.txt")
-            
-            # Save results to a text file
+                f.write(f"{name} Results: {len(results)}\n")
+
+            filename = os.path.join(output_dir, f"{name.lower()}_results.txt")
             searcher.save_results(filename)
             print(f"Finished writing results to {filename}")
+
         except Exception as e:
-            print(f"Error running {searcher.__class__.__name__}: {e}")
+            print(f"Error running {name}: {e}")
             with open(summary_file, "a", encoding="utf-8") as f:
-                f.write(f"{searcher.__class__.__name__} Results: Error ({e})\n")
+                f.write(f"{name} Results: Error ({e})\n")
+
 
 if __name__ == "__main__":
     main()
