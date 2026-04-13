@@ -127,9 +127,9 @@ def main():
         f.write("-" * 50 + "\n\n")
 
     searchers = [
-        #ArxivSearcher(),
-        IEEESearcher(),
-        #ScopusSearcher(),
+        ArxivSearcher(),
+        #IEEESearcher(),
+        ScopusSearcher(),
         # WosSearcher(),
         PubmedSearcher(),
         # OpenAlexSearcher(),
@@ -142,6 +142,7 @@ def main():
         try:
             if name == "ArxivSearcher":
                 results = searcher.search(query=arxiv_query_str)
+
             elif name == "ScopusSearcher":
                 results = searcher.search(query=scopus_query_str)
             elif searcher.__class__.__name__ == 'IEEESearcher':
@@ -159,11 +160,9 @@ def main():
             print(f"Finished writing results to {filename}")
 
         except Exception as e:
-            print(f"API request failed: {e}")
-            if response is not None:
-                print("Status code:", response.status_code)
-                print("Response body:", response.text[:2000])
-            break
+            print(f"Error running {searcher.__class__.__name__}: {e}")
+            with open(summary_file, "a", encoding="utf-8") as f:
+                f.write(f"{searcher.__class__.__name__} Results: Error ({e})\n")
 
 
 if __name__ == "__main__":
