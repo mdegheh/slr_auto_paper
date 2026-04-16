@@ -1,7 +1,7 @@
 import os
 import requests
 from .base_searcher import BaseSearcher
-
+from main import filter_last_years
 
 class ScopusSearcher(BaseSearcher):
     def __init__(self):
@@ -78,6 +78,7 @@ class ScopusSearcher(BaseSearcher):
                     print(response.text)
                 break
 
+        self.results = filter_last_years(results=self.results)
         return self.results
 
     def save_results(self, filename: str):

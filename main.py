@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 from searchers import (
     ArxivSearcher,
     IEEESearcher,
@@ -11,8 +12,53 @@ from searchers import (
 import searchers.arxiv_searcher
 import searchers.scopus_searcher
 
-print("Arxiv module file:", searchers.arxiv_searcher.__file__)
-print("Scopus module file:", searchers.scopus_searcher.__file__)
+
+def extract_year(r):
+    """
+    Extract publication year from different result formats.
+    Returns int or None.
+    """
+
+    # arXiv object
+    if hasattr(r, "published"):
+        return r.published.year
+
+    # Scopus
+    if isinstance(r, dict) and "prism:coverDate" in r:
+        try:
+            return int(r["prism:coverDate"][:4])
+        except:
+            return None
+
+    # IEEE
+    if isinstance(r, dict) and "publication_year" in r:
+        try:
+            return int(r["publication_year"])
+        except:
+            return None
+
+    # PubMed (depends on your implementation)
+    if isinstance(r, dict):
+        if "pubdate" in r:
+            try:
+                return int(r["pubdate"][:4])
+            except:
+                return None
+
+    return None
+
+def filter_last_years(results):
+    period = 10          # Last 10 years are considered
+    cutoff = datetime.now().year - period
+    filtered = []
+
+    for r in results:
+        year = extract_year(r)
+
+        if year is not None and year >= cutoff:
+            filtered.append(r)
+
+    return filtered
 
 def main():
     load_dotenv()
@@ -30,28 +76,59 @@ def main():
     )
 
     # arXiv query must already be fully fielded.
-    # arXiv supports field prefixes like all: and Boolean grouping. :contentReference[oaicite:2]{index=2}
     arxiv_query_str = (
         '('
-        'all:"large language model" OR all:LLM OR '
-        'all:"autonomous agent" OR all:"multi-agent" OR '
-        'all:"AI agent" OR '
-        'all:"code generation" OR all:"program synthesis"'
+        '(ti:"large language model" OR abs:"large language model") OR '
+        '(ti:LLM OR abs:LLM) OR '
+        '(ti:"autonomous agent" OR abs:"autonomous agent") OR '
+        '(ti:"multi-agent" OR abs:"multi-agent") OR '
+        '(ti:"AI agent" OR abs:"AI agent") OR '
+        '(ti:"code generation" OR abs:"code generation") OR '
+        '(ti:"program synthesis" OR abs:"program synthesis")'
         ') AND ('
-        'all:"source code" OR all:"code repository" OR '
-        'all:"research artifact" OR all:"software artifact" OR '
-        'all:"scientific paper" OR all:"executable paper"'
-        #'all:"experiment" OR all:"workflow"'
+        '(ti:"source code" OR abs:"source code") OR '
+        '(ti:"code repository" OR abs:"code repository") OR '
+        '(ti:"research artifact" OR abs:"research artifact") OR '
+        '(ti:"software artifact" OR abs:"software artifact") OR '
+        '(ti:"scientific paper" OR abs:"scientific paper") OR '
+        '(ti:"executable paper" OR abs:"executable paper")'
         ') AND ('
         'all:reproducib* OR '
-        'all:"code execution" OR all:"execution" OR '
-        'all:"dependency resolution" OR all:dependency OR '
+        'all:"code execution" OR '
+        'all:"dependency resolution" '
         'all:"environment setup" OR '
-        #'all:environment OR all:docker OR all:repair OR '
         'all:containerization OR '
         'all:"repository repair"'
         ')'
+        # '(ti:reproducib* OR abs:reproducib*) OR '
+        # '(ti:"code execution" OR abs:"code execution") OR '
+        # '(ti:"dependency resolution" OR abs:"dependency resolution") OR '
+        # '(ti:"environment setup" OR abs:"environment setup") OR '
+        # '(ti:containerization OR abs:containerization) OR '
+        # '(ti:"repository repair" OR abs:"repository repair")'
+        # ')'
     )
+    # arxiv_query_str = (
+    #     '('
+    #     'all:"large language model" OR all:LLM OR '
+    #     'all:"autonomous agent" OR all:"multi-agent" OR '
+    #     'all:"AI agent" OR '
+    #     'all:"code generation" OR all:"program synthesis"'
+    #     ') AND ('
+    #     'all:"source code" OR all:"code repository" OR '
+    #     'all:"research artifact" OR all:"software artifact" OR '
+    #     'all:"scientific paper" OR all:"executable paper"'
+    #     #'all:"experiment" OR all:"workflow"'
+    #     ') AND ('
+    #     'all:reproducib* OR '
+    #     'all:"code execution" OR all:"execution" OR '
+    #     'all:"dependency resolution" OR all:dependency OR '
+    #     'all:"environment setup" OR '
+    #     #'all:environment OR all:docker OR all:repair OR '
+    #     'all:containerization OR '
+    #     'all:"repository repair"'
+    #     ')'
+    # )
 
     scopus_query_str = (
         'TITLE-ABS-KEY(('
@@ -76,6 +153,7 @@ def main():
         '"repository repair"'
         '))'
     )
+    scopus_query_str += ' AND PUBYEAR > 2016'
 
     ieee_query_str = (
         '("large language model" OR "large language models" OR '

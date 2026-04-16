@@ -1,6 +1,8 @@
 import os
 import requests
 from .base_searcher import BaseSearcher
+from main import filter_last_years
+
 
 class IEEESearcher(BaseSearcher):
     """

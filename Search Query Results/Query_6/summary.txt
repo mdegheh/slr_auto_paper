@@ -1,0 +1,15 @@
+Search Query Used
+--------------------------------------------------
+Generic query:
+("large language model*" OR "LLM*" OR "autonomous agent*" OR "multi-agent*" OR "AI agent*") AND ("code repositor*" OR "source code" OR "scientific paper*" OR "executable paper*" OR "research artifact*") AND ("reproducib*" OR "code execution" OR "dependency resolution" OR "environment synthesis" OR "dynamic analysis" OR "runtime profiling" OR "sandboxing" OR "automated execution" OR "environment setup" OR "containerization" OR "code repair" OR "code generation")
+
+arXiv query:
+((ti:"large language model" OR abs:"large language model") OR (ti:LLM OR abs:LLM) OR (ti:"autonomous agent" OR abs:"autonomous agent") OR (ti:"multi-agent" OR abs:"multi-agent") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"code generation" OR abs:"code generation") OR (ti:"program synthesis" OR abs:"program synthesis")) AND ((ti:"source code" OR abs:"source code") OR (ti:"code repository" OR abs:"code repository") OR (ti:"research artifact" OR abs:"research artifact") OR (ti:"software artifact" OR abs:"software artifact") OR (ti:"scientific paper" OR abs:"scientific paper") OR (ti:"executable paper" OR abs:"executable paper")) AND (all:reproducib* OR all:"code execution" OR all:"dependency resolution" all:"environment setup" OR all:containerization OR all:"repository repair")
+
+Scopus query:
+TITLE-ABS-KEY(("large language model" OR "large language models" OR LLM OR LLMs OR "autonomous agent" OR "autonomous agents" OR "multi-agent" OR "AI agent" OR "AI agents" OR "code generation" OR "program synthesis") AND ("source code" OR "code repository" OR "code repositories" OR "research artifact" OR "research artifacts" OR "software artifact" OR "software artifacts" OR "scientific paper" OR "scientific papers" OR "executable paper" OR "executable papers") AND (reproducib* OR "code execution" OR "dependency resolution" OR "environment setup" OR containerization OR "repository repair")) AND PUBYEAR > 2016
+--------------------------------------------------
+
+ArxivSearcher Results: 19
+ScopusSearcher Results: 87
+PubmedSearcher Results: 12

@@ -1,6 +1,6 @@
 import arxiv
 from .base_searcher import BaseSearcher
-
+from main import filter_last_10_years 
 
 class ArxivSearcher(BaseSearcher):
     def __init__(self):
@@ -27,6 +27,7 @@ class ArxivSearcher(BaseSearcher):
             sort_by=arxiv.SortCriterion.Relevance,
         )
         self.results = list(self.client.results(search_obj))
+        self.results = filter_last_10_years(results=self.results)
         return self.results
 
     def save_results(self, filename: str):
